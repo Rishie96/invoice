@@ -17,8 +17,9 @@ export default class Items extends Component {
         let count = this.state.count;
         let table = this.state.table;
         let id = 'REF'+Math.round(Math.random()*999);
+        count++;
         let tr = (
-                <tr key={++count}>
+                <tr key={id}>
                     <td className="table-no">{id}</td>
                     <td><input id={`name${count}`} /></td>
                     <td><input id={`price${count}`} /></td>
@@ -26,7 +27,7 @@ export default class Items extends Component {
                     <td id={`total${count}`} className="table-single-total">$0.00</td>
                     <td className="add-rem">
                         <span id={`save${count}`} onClick={() => this.onItemSave(count, id)} className="table-add"><i className='fas fa-save'></i></span>
-                        <span id={`rem${count}`} onClick={() => this.onItemRem(id)} className="table-rem"><i className='fas fa-minus-circle' style={{fontSize: '10pt'}}></i></span>
+                        <span id={`rem${count}`} onClick={() => this.onItemRem(count, id)} className="table-rem"><i className='fas fa-minus-circle' style={{fontSize: '10pt'}}></i></span>
                     </td>
                 </tr>
             )
@@ -75,12 +76,17 @@ export default class Items extends Component {
         }
     }
 
-    onItemRem = (id) => {
+    onItemRem = (count, id) => {
         let table = this.state.table;
-        let items = this.state.items;
+        let items = this.state.items;        
         for(let i=0; i<items.length; i++) {
             if(items[i][0] === id) {
                 items.splice(i, 1);
+                break;
+            }
+        }
+        for(let i=0; i<table.length; i++) {
+            if(table[i].key === id) {
                 table.splice(i, 1);
                 break;
             }
