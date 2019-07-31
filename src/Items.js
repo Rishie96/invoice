@@ -55,7 +55,7 @@ export default class Items extends Component {
         else {
             message.innerHTML = '';
             if((items.filter((item)=> {
-                if(item[0] === name.value) {
+                if(item[1] === name.value) {
                     message.innerHTML = 'Already exists!';
                     return [];
                 }
