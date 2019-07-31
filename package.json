@@ -2,7 +2,7 @@
   "name": "inovice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rishie96.github.io/invoice-react/",
+  "homepage": "https://rishie96.github.io/invoice/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
