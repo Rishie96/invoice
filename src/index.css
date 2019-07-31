@@ -1,13 +1,98 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+input {
+  width: 99.2%;
+  border-radius: 3px;
+  border: 1px solid rgb(179, 179, 179);
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input:disabled {
+  background-color: rgb(240, 240, 240);
+}
+
+table {
+  font-family: monospace;
+  font-size: 11pt;
+  width: 100%;
+}
+
+td {
+  background-color: rgb(247, 247, 247);
+}
+
+th {
+  background-color: rgb(181, 215, 245);
+}
+
+.table-container {
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 80%
+}
+
+.table-no {
+  text-align: center;
+  width: 5%;
+}
+
+.table-name {
+  width: 43%;
+}
+
+.table-price {
+  width: 15%;
+}
+
+.table-quantity {
+  width: 13%;
+}
+
+.table-total {
+  width: 12%;
+}
+
+.table-single-total {
+  text-align: center;
+}
+
+.table-action {
+  width: 12%;
+}
+
+.table-add-btn {
+  background-color: rgb(233, 233, 233);
+  margin-left: 40%;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-rem {
+  text-align: center;
+}
+
+.table-add {
+  color: rgb(25, 90, 151);
+}
+
+.table-add:hover {
+  opacity: 0.8;
+}
+
+.table-rem {
+  display: none;
+  color: rgb(228, 32, 32);
+}
+
+.table-rem:hover {
+  opacity: 0.8;
+}
+
+.table-message {
+  color: tomato;
+  text-align: center;
+}
+
+.grand-total {
+  font-weight: bold;
+  text-align: center;
 }
