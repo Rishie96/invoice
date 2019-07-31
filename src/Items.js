@@ -92,7 +92,7 @@ export default class Items extends Component {
     render() {
         return (
             <div className="table-container">
-                <table cellSpacing="0.95px">
+                <table cellSpacing="1vh">
                     <tbody>
                         <tr>
                             <th className="table-no">UID</th>
