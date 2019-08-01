@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { randomBytes } from 'crypto';
+import React, { Component } from 'react';
 
 export default class Items extends Component {
 
@@ -19,7 +18,7 @@ export default class Items extends Component {
         let id = 'REF'+Math.round(Math.random()*999);
         count++;
         let tr = (
-                <tr key={id}>
+                <tr key={id} style={{backgroundColor: table.length%2===0? 'rgb(247, 247, 247)': 'rgb(255, 255, 255)'}}>
                     <td className="table-no">{id}</td>
                     <td><input id={`name${count}`} /></td>
                     <td><input id={`price${count}`} /></td>
@@ -71,7 +70,7 @@ export default class Items extends Component {
             name.disabled = true;
             price.disabled = true;
             quantity.disabled = true;
-            grandTotal = items.reduce((prev, curr) => prev + (curr[2]*curr[3]), 0);
+            grandTotal = items.reduce((prev, curr) => prev + (curr[2]*curr[3]), 0);            
             this.setState({items, grandTotal});
         }
     }
